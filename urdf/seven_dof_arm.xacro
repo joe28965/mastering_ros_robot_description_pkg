@@ -93,10 +93,10 @@
 	  <transmission name="tran1">
 	    <type>transmission_interface/SimpleTransmission</type>
 	    <joint name="${joint_name}">
-	      <hardwareInterface>PositionJointInterface</hardwareInterface>
+	      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
 	    </joint>
 	    <actuator name="motor1">
-	      <hardwareInterface>PositionJointInterface</hardwareInterface>
+	      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
 	      <mechanicalReduction>1</mechanicalReduction>
 	    </actuator>
 	  </transmission>
@@ -560,24 +560,8 @@ This link is the base of the arm in which arm is placed
    <xacro:transmission_block joint_name="gripper_roll_joint"/>
    <xacro:transmission_block joint_name="finger_joint1"/>
    <xacro:transmission_block joint_name="finger_joint2"/>
-
-
-
-  <!-- Define arm with gripper mounted on a base -->
-	<!--
-  <xacro:base name="base"/>
-  <xacro:arm parent="base"/>
-  <xacro:gripper parent="tool"/>
-	-->
-  <!-- Define RGB-D sensor -->
-  <xacro:xtion_pro_live name="rgbd_camera" parent="base">
-    <origin xyz="0.1 0 1" rpy="0 ${75.0 * deg_to_rad} 0"/>
-    <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0 ${-90.0 * deg_to_rad}"/>
-  </xacro:xtion_pro_live>
-
-
-
-  <!-- ros_control plugin -->
+	
+ <!-- ros_control plugin -->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
       <robotNamespace>/seven_dof_arm</robotNamespace>
