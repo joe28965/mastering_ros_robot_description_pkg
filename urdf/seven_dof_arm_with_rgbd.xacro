@@ -511,8 +511,8 @@ This link is the base of the arm in which arm is placed
     <material>Gazebo/White</material>
   </gazebo>
 
+		<!--
 
-    <!-- Grasping frame -->
     <link name="grasping_frame">
 
       <inertial>
@@ -542,7 +542,7 @@ This link is the base of the arm in which arm is placed
       <origin xyz="0.08 0 0" rpy="0 0 0"/>
     </joint>
 
-
+		-->
 
   <xacro:include filename="$(find mastering_ros_robot_description_pkg)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
 
@@ -571,7 +571,7 @@ This link is the base of the arm in which arm is placed
 	-->
   <!-- Define RGB-D sensor -->
   <xacro:xtion_pro_live name="rgbd_camera" parent="base">
-    <origin xyz="0.1 0 1" rpy="0 ${75.0 * deg_to_rad} 0"/>
+    <origin xyz="0.15 0.0 0.8" rpy="0 ${75.0 * deg_to_rad} 0"/>
     <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0 ${-90.0 * deg_to_rad}"/>
   </xacro:xtion_pro_live>
 
