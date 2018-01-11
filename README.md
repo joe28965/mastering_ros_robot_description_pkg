@@ -22,7 +22,7 @@ _Original source code_ from [Josep Lentin](https://www.linkedin.com/in/lentinjos
 ### **Installation** 
 Download this package in the _src_ folder of your ROS workspace
 
-```https://github.com/jocacace/mastering_ros_robot_description_pkg```
+```git clone https://github.com/jocacace/mastering_ros_robot_description_pkg```
 
 ### **Get this book** (in pre-order)
 - [Packt Publishing](https://www.packtpub.com/hardware-and-creative/mastering-ros-robotics-programming-second-edition) 
