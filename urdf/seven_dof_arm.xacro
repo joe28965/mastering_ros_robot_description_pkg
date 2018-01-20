@@ -500,10 +500,7 @@ This link is the base of the arm in which arm is placed
     <visual>
       <origin xyz="0.04 0.03 0"/>
       <geometry>
-
-          <box size="${right_gripper_len} ${right_gripper_width} ${right_gripper_height}" />
-
-
+      	<box size="${right_gripper_len} ${right_gripper_width} ${right_gripper_height}" />
       </geometry>
       <material name="White" />
     </visual>
@@ -533,7 +530,6 @@ This link is the base of the arm in which arm is placed
 					<!--
           <box size="${grasp_frame_len} ${grasp_frame_width} ${grasp_frame_height}" />
 					-->
-
       </geometry>
       <material name="White" />
     </visual>
