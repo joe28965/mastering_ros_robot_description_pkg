@@ -36,7 +36,7 @@ def generate_launch_description():
 		executable='spawn_entity.py',
 		arguments=['-entity', 'pan_tilt',
 								'-file', urdf,
-								'-z', '0.1',
+								'-z', '0.3',
 							],
 		output='screen')
 

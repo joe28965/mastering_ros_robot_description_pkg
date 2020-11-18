@@ -23,10 +23,37 @@ endif()
 ################################################################################
 find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(gazebo_msgs REQUIRED)
+find_package(gazebo_ros REQUIRED)
+
+################################################################################
+# Build
+################################################################################
+
+include_directories(
+  include
+)
+
+set(DEPENDENCIES
+  "rclcpp"
+  "gazebo_msgs"
+  "gazebo_ros"
+)
+
+add_library(joint_control SHARED "src/jointControl.cpp")
+ament_target_dependencies(joint_control ${DEPENDENCIES})
+ament_export_libraries(joint_control)
 
 ################################################################################
 # Install
 ################################################################################
+
+install(TARGETS joint_control
+  EXPORT export_${PROJECT_NAME}
+  DESTINATION lib)
+
 install(
   DIRECTORY launch meshes rviz urdf
   DESTINATION share/${PROJECT_NAME}

@@ -28,3 +28,17 @@ Download this package in the _src_ folder of your ROS workspace
 - [Packt Publishing](https://www.packtpub.com/hardware-and-creative/mastering-ros-robotics-programming-second-edition) 
 - [Amazon](https://www.amazon.com/Mastering-ROS-Robotics-Programming-Second/dp/1788478959)
 
+## Added for Foxy Branch
+Currently only the pan_tilt urdf works.
+
+Launch the following file to start gazebo and rviz with the pan_tilt robot.
+
+```ros2 launch mastering_ros_robot_description_pkg view_pan_tilt_urdf.launch.py```
+
+Launch ```rqt``` in a different terminal.
+Go to Plugins->Topics->Message Publisher.
+Add the topic ```pan_topic``` and ```tilt_topic``` to your list of topics.
+Now you can set values to those topics to publish (do not forget to tick the checkbox to start publishing).
+The range for the pan joint is ```lower="-3.14" upper="3.14"```
+The range for the tilt joint is ```lower="-4.64" upper="-1.5"```
+
