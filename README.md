@@ -38,7 +38,10 @@ Launch the following file to start gazebo and rviz with the pan_tilt robot.
 Launch ```rqt``` in a different terminal.
 Go to Plugins->Topics->Message Publisher.
 Add the topic ```pan_topic``` and ```tilt_topic``` to your list of topics.
+
 Now you can set values to those topics to publish (do not forget to tick the checkbox to start publishing).
+
 The range for the pan joint is ```lower="-3.14" upper="3.14"```
+
 The range for the tilt joint is ```lower="-4.64" upper="-1.5"```
 
