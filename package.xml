@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>mastering_ros_robot_description_pkg</name>
-  <version>0.0.0</version>
-  <description>The mastering_ros_robot_description_pkg package</description>
-  <maintainer email="robot@todo.todo">robot</maintainer>
-  <license>TODO: License declaration</license>
+	<name>mastering_ros_robot_description_pkg</name>
+	<version>0.0.0</version>
+	<description>The mastering_ros_robot_description_pkg package</description>
+	<maintainer email="robot@todo.todo">robot</maintainer>
+	<license>TODO: License declaration</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+	<buildtool_depend>ament_cmake</buildtool_depend>
+
 	<depend>rclcpp</depend>
-  <depend>gazebo_msgs</depend>
-  <depend>gazebo_ros</depend>
+	<depend>gazebo_msgs</depend>
+	<depend>gazebo_ros</depend>
+	<depend>xacro</depend>
 
-  <export>
-    <build_type>ament_cmake</build_type>
-  </export>
+	<export>
+		<build_type>ament_cmake</build_type>
+	</export>
 </package>
